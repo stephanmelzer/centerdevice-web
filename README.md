@@ -1,0 +1,1 @@
+# centerdevice SPA version layout

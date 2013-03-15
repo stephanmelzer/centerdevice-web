@@ -1,0 +1,72 @@
+@import "constants";
+@import "compass";
+@import "mixins";
+
+body > header {
+
+  h1 {
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    top: 0.1em;
+    left: 0;
+    width: 5em;
+
+    @include for(handhelds) {
+      position: relative;
+    }
+
+    @include for(medium-screens) {
+      left: 0.5em;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  @include for(wide-screens) {
+    margin: 2em 0em 1em 2em;
+    position: relative;
+  }
+
+
+  .form-search {
+    padding: 0.8em 1em;
+    @include background-image(linear-gradient($gradient-top, $gradient-bottom));
+
+    @include for(handhelds) {
+      input {
+        display: block;
+        width: 100%;
+        height: auto;
+        @include box-sizing(border-box);
+      }
+    }
+
+    @include for(medium-screens) {
+      margin: 4em 0 1em;
+    }
+
+    @include for(wide-screens) {
+      margin-left: $sidebar-width + 5em;
+      @include border-left-radius(0.3em);
+    }
+
+    button {
+      margin-left: 0.5em;
+
+      @include for(handhelds) {
+        display: block;
+        width: 100%;
+        margin: 0.5em 0 0;
+      }
+    }
+  }
+
+
+}

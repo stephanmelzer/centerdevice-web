@@ -1,0 +1,33 @@
+{
+  "name": "centerdevice-spa",
+  "version": "0.0.1",
+  "description": "centerdevice web interface implemented as a SPA",
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bripkens/centerdevice-layout.git"
+  },
+  "keywords": [
+    "centerdevice"
+  ],
+  "author": {
+    "name": "Ben Ripkens",
+    "email": "ben.ripkens@codecentric.de",
+    "url": "http://www.codecentric.de"
+  },
+  "dependencies": {
+    "grunt": "0.4.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-connect": "~0.2.0",
+    "grunt-contrib-compass": "~0.1.3"
+  }
+}
