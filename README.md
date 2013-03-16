@@ -1,4 +1,4 @@
-# centerdevice SPA version layout
+# Web resources for centerdevice prototypes
 
 ## Dependencies
 
