@@ -1,0 +1,48 @@
+.movie-overview {
+  margin-top: 30px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  li {
+    position: relative;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    border-top: 1px solid #cdcdcd;
+
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 15px;
+  }
+
+  a, .summary {
+    margin-left: 30px;
+  }
+
+  a {
+    font-weight: bold;
+    color: $text-color;
+  }
+
+  .summary {
+    font-size: 0.8em;
+
+    & > * {
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+  }
+
+  .author {
+    font-weight: bold;
+  }
+
+}

@@ -1,3 +1,9 @@
+@import "mixins";
+
+body {
+  color: $text-color;
+}
+
 .main {
   margin: 0 auto;
   width: 90%;
