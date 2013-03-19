@@ -1,0 +1,8 @@
+.main {
+  margin: 0 auto;
+  width: 90%;
+
+  @include for(wide-screens) {
+    max-width: $break-large;
+  }
+}
