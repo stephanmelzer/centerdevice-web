@@ -1,14 +1,19 @@
 @import "mixins";
 
 body {
-  color: $text-color;
+	color: $text-color;
 }
 
 .main {
-  margin: 0 auto;
-  width: 90%;
+	margin: 0 auto;
+	width: 90%;
 
-  @include for(wide-screens) {
-    max-width: $break-large;
-  }
+	@include for(wide-screens) {
+		max-width: $break-large;
+	}
+}
+
+.spinner{
+	margin-left: 50%;
+	margin-top: 50px;
 }
