@@ -6,7 +6,7 @@ $header-margin-top: 2em;
 $wide-screen-header-size: 51px;
 
 @include for(wide-screens) {
-  body > .banner {
+  .banner {
     @include background-image(linear-gradient($gradient-top, $gradient-bottom));
     position: absolute;
     width: 50%;
@@ -16,13 +16,13 @@ $wide-screen-header-size: 51px;
   }
 }
 
-body > header {
+header {
   margin: $header-margin-top auto 1em;
   max-width: $break-large;
   position: relative;
 
   @include for(wide-screens) {
-    height: $wide-screen-header-size
+    height: $wide-screen-header-size + 50px;
   }
 
   h1 {

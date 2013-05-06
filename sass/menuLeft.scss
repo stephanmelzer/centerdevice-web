@@ -1,0 +1,25 @@
+@import "mixins";
+
+.menuLeft{
+	border-top-style: solid;
+	border-top-color: rgb(217, 217, 217);
+
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+	
+	a{
+		color: $text-color;
+		text-decoration: none;
+		background-image:url('../img/group-symbols.png');
+		background-position: 0px -34px;
+		background-repeat: no-repeat;
+		padding-left: 25px;
+
+
+	}
+
+	a.group{
+		background-position: 0px -816px;
+	}
+}
