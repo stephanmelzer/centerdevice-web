@@ -5,85 +5,74 @@
 $header-margin-top: 2em;
 $wide-screen-header-size: 51px;
 
-@include for(wide-screens) {
-  .banner {
-    @include background-image(linear-gradient($gradient-top, $gradient-bottom));
-    position: absolute;
-    width: 50%;
-    height: $wide-screen-header-size + 1px;
-    left: 50%;
-    top: $header-margin-top;
+header {
+ a {
+  display: block;
+  text-align: right;
+  margin: 5px 5px 5px 0;
+}
+img {
+  float: left;
+  margin-top: 15px;
+  margin-left: 2%;
+
+  @include for(medium-screens) {
+    float: none;
+    margin:0 0 10px 20px;
+  }
+
+  @include for(handhelds) {
+    float: none;
+    margin:0 0 10px 20px;
   }
 }
 
-header {
-  margin: $header-margin-top auto 1em;
-  max-width: $break-large;
-  position: relative;
+.form-search {
+  padding: 0.8em 1em;
+  @include background-image(linear-gradient($gradient-top, $gradient-bottom));
+
+  @include for(handhelds) {
+    input {
+      display: block;
+      width: 100%;
+      height: auto;
+      @include box-sizing(border-box);
+    }
+  }
+
+  @include for(medium-screens) {
+    margin: 0.5em 0 1em;
+  }
 
   @include for(wide-screens) {
-    height: $wide-screen-header-size + 50px;
+    margin-left: $sidebar-width;
+    @include border-left-radius(0.3em);
   }
 
-  h1 {
+  button {
+    margin-left: 0.5em;
+
+    @include for(handhelds) {
+      display: block;
+      width: 100%;
+      margin: 0.5em 0 0;
+    }
+  }
+}
+
+.form-upload {
+  input {
     display: block;
-    text-indent: 100%;
-    white-space: nowrap;
+  }
+
+  @include for(wide-screens) {
+    margin-left: $sidebar-width;
+  }
+
+  .hidden {
+    height: 0px;
+    width: 0px; 
     overflow: hidden;
-    position: absolute;
-    top: 0.1em;
-    left: 0;
-    width: 5em;
-
-    @include for(handhelds) {
-      position: relative;
-      left: 10px;
-    }
-
-    @include for(medium-screens) {
-      position: relative;
-      left: 0.5em;
-    }
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
   }
-
-  .form-search {
-    padding: 0.8em 1em;
-    @include background-image(linear-gradient($gradient-top, $gradient-bottom));
-
-    @include for(handhelds) {
-      input {
-        display: block;
-        width: 100%;
-        height: auto;
-        @include box-sizing(border-box);
-      }
-    }
-
-    @include for(medium-screens) {
-      margin: 0.5em 0 1em;
-    }
-
-    @include for(wide-screens) {
-      margin-left: $sidebar-width + 5em;
-      @include border-left-radius(0.3em);
-    }
-
-    button {
-      margin-left: 0.5em;
-
-      @include for(handhelds) {
-        display: block;
-        width: 100%;
-        margin: 0.5em 0 0;
-      }
-    }
-  }
-
-
+}
 }
