@@ -41,23 +41,32 @@ img {
   }
 
   @include for(medium-screens) {
-    margin: 0.5em 0 1em;
+   input {
+    display: block;
+    width: 100%;
+    height: auto;
+    @include box-sizing(border-box);
+  }
+}
+
+@include for(wide-screens) {
+  margin-left: $sidebar-width;
+  @include border-left-radius(0.3em);
+}
+
+button {
+  margin-left: 0.5em;
+
+  @include for(handhelds) {
+    display: block;
+    width: 100%;
+    margin: 0.5em 0 0;
   }
 
-  @include for(wide-screens) {
-    margin-left: $sidebar-width;
-    @include border-left-radius(0.3em);
+  @include for(medium-screens) {
+    margin: 0.5em 0 0;
   }
-
-  button {
-    margin-left: 0.5em;
-
-    @include for(handhelds) {
-      display: block;
-      width: 100%;
-      margin: 0.5em 0 0;
-    }
-  }
+}
 }
 
 .form-upload {
